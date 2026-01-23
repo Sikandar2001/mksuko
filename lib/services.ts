@@ -6,7 +6,7 @@ export const services = [
     description: "High-quality aluminium fabrication and furniture solutions. We provide durable, stylish, and customized designs to enhance your home or office space.",
     src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
     bgColor: "bg-white",
-    className: "text-xl md:text-2xl whitespace-nowrap",
+    className: "text-xl md:text-2xl",
     wide: true,
   },
   {
@@ -15,7 +15,7 @@ export const services = [
     description: "Premium quality fresh Chakki Atta. Made from the finest grains to ensure soft and healthy rotis for your family. Experience the taste of purity.",
     src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
     bgColor: "bg-white",
-    className: "text-xl md:text-2xl whitespace-nowrap",
+    className: "text-xl md:text-2xl",
   },
   {
     id: "03",
@@ -23,7 +23,7 @@ export const services = [
     description: "Pure and refreshing mineral water. Processed with advanced filtration technology to ensure safety and hydration in every drop.",
     src: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=800&auto=format&fit=crop",
     bgColor: "bg-lime-400",
-    className: "text-xl md:text-2xl whitespace-nowrap",
+    className: "text-xl md:text-2xl",
   },
   {
     id: "04",
@@ -31,7 +31,7 @@ export const services = [
     description: "Elevate your presence on social platforms. From content creation to strategy and analytics, we help you connect with your audience and build a loyal community.",
     src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
     bgColor: "bg-white",
-    className: "text-xl md:text-2xl whitespace-nowrap",
+    className: "text-xl md:text-2xl",
     wide: true,
   },
   {
@@ -40,6 +40,6 @@ export const services = [
     description: "Tell your story through stunning visuals. Whether it's product shots, portraits, or event photography, we capture moments that define your brand.",
     src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
     bgColor: "bg-white",
-    className: "text-xl md:text-2xl whitespace-nowrap",
+    className: "text-xl md:text-2xl",
   },
 ];

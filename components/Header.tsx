@@ -34,7 +34,7 @@ export default function Header() {
         scrolled ? "bg-black/80 backdrop-blur-md py-4" : "bg-transparent py-6"
       )}
     >
-      <div className="w-full px-6 md:px-12 flex items-center justify-between md:justify-start md:gap-20">
+      <div className="w-full px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/home" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
            <span className="text-white">MKSUKO</span>
