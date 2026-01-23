@@ -52,9 +52,9 @@ const TiltCard = ({ children, className }: { children: React.ReactNode; classNam
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-black relative overflow-hidden" style={{ perspective: "1000px" }}>
+    <section id="about" className="pt-0 pb-0 bg-black relative overflow-hidden" style={{ perspective: "1000px" }}>
       <div className="container mx-auto px-6">
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-6">
           
           {/* Headline */}
           <motion.h2 
@@ -81,7 +81,7 @@ export default function About() {
           </div>
 
           {/* Stats / Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 perspective-container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0 perspective-container">
             
             {/* Card 1: 360 Stats */}
             <TiltCard className="bg-[#0a0a0a] rounded-3xl p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-[320px] border border-white/5 hover:border-white/10 transition-colors group">

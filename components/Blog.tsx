@@ -28,7 +28,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-12 bg-black text-white">
+    <section id="blog" className="pt-0 pb-12 bg-black text-white">
       <div className="container mx-auto px-6">
         
         {/* Header */}

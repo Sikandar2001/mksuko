@@ -17,16 +17,16 @@ import { ArrowUpRight } from "lucide-react";
 const works = [
   {
     id: 1,
-    title: "VIVID",
-    category: "ART DIRECTION",
-    src: "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1000&auto=format&fit=crop",
+    title: "ANIL VISHVAKARMA",
+    category: "Aluminium enterprises & Furnitures",
+    src: "/image/av12.png",
     color: "text-red-500"
   },
   {
     id: 2,
-    title: "SEASONS",
-    category: "MARKETING",
-    src: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=1000&auto=format&fit=crop", 
+    title: "MKSUKO ATTA",
+    category: "FOOD PRODUCTS",
+    src: "/image/av2.png", 
     color: "text-orange-500"
   },
   {
@@ -174,7 +174,7 @@ export default function Works() {
       <div className="sticky top-0 h-screen overflow-hidden flex flex-col items-center justify-center">
         
         {/* Title Section */}
-        <div className="absolute top-40 left-0 w-full flex flex-col items-center justify-center z-20 pointer-events-none">
+        <div className="absolute top-20 left-0 w-full flex flex-col items-center justify-center z-20 pointer-events-none">
             <div className="flex items-center gap-2 mb-1">
                 <span className="text-lime-400 text-lg font-light">¬</span>
                 <span className="text-xs font-bold tracking-[0.3em] text-white/60 uppercase">FEATURED</span>

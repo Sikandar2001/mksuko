@@ -39,11 +39,11 @@ export default function ContactPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-black text-white pt-32 pb-24">
+    <main className="min-h-screen bg-black text-white pt-12 pb-24">
       <div className="container mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-8">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

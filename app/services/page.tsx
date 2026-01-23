@@ -6,14 +6,15 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { services } from "@/lib/services";
+import { TiltCard } from "@/components/TiltCard";
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-black pt-32 pb-20">
-      <section className="container mx-auto px-6">
+    <main className="min-h-screen bg-black pt-32 pb-20 overflow-hidden">
+      <div className="container mx-auto px-6">
         
         {/* Header */}
-        <div className="flex flex-col items-center mb-24">
+        <div className="flex flex-col items-center mb-12">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +27,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-7xl md:text-9xl font-bold tracking-tighter text-white"
+            className="text-6xl md:text-8xl font-bold tracking-tighter text-white"
           >
             SER<span className="italic font-serif font-light">VICES</span>
           </motion.h2>
@@ -46,11 +47,13 @@ export default function ServicesPage() {
                 {/* Number & Title */}
                 <div className={cn(
                   "flex items-center gap-6 relative z-10",
-                  service.wide ? "lg:col-span-6" : "lg:col-span-4"
+                  // @ts-ignore
+                  service.wide ? "lg:col-span-4" : "lg:col-span-4"
                 )}>
                   <span className="text-zinc-500 font-mono text-sm">({service.id})</span>
                   <h3 className={cn(
                     "text-4xl md:text-6xl font-medium tracking-tight text-white group-hover:pl-4 transition-all duration-300",
+                    // @ts-ignore
                     service.className
                   )}>
                     {service.title}
@@ -59,32 +62,36 @@ export default function ServicesPage() {
 
                 {/* Center Image Area */}
                 <div className={cn(
-                  "flex justify-center relative z-10 perspective-[1500px]",
-                  service.wide ? "lg:col-span-3 lg:-translate-x-12" : "lg:col-span-4"
+                  "flex justify-center relative z-10",
+                  // @ts-ignore
+                  service.wide ? "lg:col-span-5" : "lg:col-span-5"
                 )}>
-                  <div className={`relative w-full max-w-[320px] aspect-[4/3] ${service.bgColor} rounded-lg overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] origin-center opacity-100 [transform:rotateX(0deg)_scale(1)] lg:opacity-0 lg:[transform:rotateX(90deg)_scale(0.8)] lg:group-hover:[transform:rotateX(0deg)_scale(1)] lg:group-hover:opacity-100`}>
-                     <div className="absolute inset-0 flex items-center justify-center p-8">
-                        <div className="relative w-full h-full shadow-2xl">
-                           <Image 
-                            src={service.src} 
-                            alt={service.title} 
-                            fill 
-                            className="object-cover"
-                           />
-                        </div>
-                     </div>
-                  </div>
+                  <TiltCard className="w-full max-w-[440px]">
+                    <div className={`relative w-full aspect-[4/3] ${service.bgColor} rounded-xl overflow-hidden shadow-2xl border border-white/10`}>
+                       <div className="absolute inset-0 flex items-center justify-center p-6">
+                          <div className="relative w-full h-full shadow-inner rounded-lg overflow-hidden">
+                             <Image 
+                              src={service.src} 
+                              alt={service.title} 
+                              fill 
+                              className="object-cover transition-transform duration-700 hover:scale-110"
+                            />
+                          </div>
+                       </div>
+                    </div>
+                  </TiltCard>
                 </div>
 
-                {/* Description & Button */}
+                {/* Description & Link */}
                 <div className={cn(
-                  "flex flex-col items-end gap-6 relative z-10 text-right",
-                  service.wide ? "lg:col-span-3" : "lg:col-span-4"
+                  "flex flex-col md:flex-row lg:flex-col justify-between items-start lg:items-end gap-6 text-right relative z-10",
+                  // @ts-ignore
+                  service.wide ? "lg:col-span-3" : "lg:col-span-3"
                 )}>
-                  <p className="text-zinc-400 max-w-xs text-lg leading-relaxed">
+                  <p className="text-zinc-400 text-lg max-w-xs leading-relaxed text-left lg:text-right group-hover:text-white transition-colors duration-300">
                     {service.description}
                   </p>
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300 group-hover:scale-110">
                     <ArrowUpRight className="w-5 h-5" />
                   </div>
                 </div>
@@ -92,8 +99,10 @@ export default function ServicesPage() {
               </motion.div>
             </Link>
           ))}
+          <div className="border-t border-white/10" />
         </div>
-      </section>
+
+      </div>
     </main>
   );
 }

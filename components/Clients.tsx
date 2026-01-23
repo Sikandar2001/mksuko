@@ -25,7 +25,7 @@ const clients = [
 
 export default function Clients() {
   return (
-    <section className="py-12 bg-black relative">
+    <section className="pt-12 pb-0 bg-black relative">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
