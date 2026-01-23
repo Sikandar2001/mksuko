@@ -65,11 +65,17 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute top-[75%] left-[8%] max-w-md z-20 pointer-events-none"
+                className="absolute top-[60%] left-[8%] max-w-md z-20"
              >
+               <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 drop-shadow-lg">
+                 Aluminium Enterprises & Furniture
+               </h2>
                <p className="text-lg md:text-xl font-medium text-white/90 leading-relaxed drop-shadow-lg">
                  From Concept to Creation — Beautiful design has the power to captivate audiences.
                </p>
+               <button className="mt-6 px-8 py-3 bg-white text-black rounded-full font-medium hover:bg-zinc-200 transition-colors">
+                 Read More
+               </button>
              </motion.div>
           </div>
 
