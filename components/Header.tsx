@@ -36,7 +36,7 @@ export default function Header() {
     >
       <div className="w-full px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/home" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
+        <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
            <span className="text-white">MKSUKO</span>
         </Link>
 
