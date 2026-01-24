@@ -10,8 +10,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ServiceDetailPage({ params }: { params: { id: string } }) {
-  const service = services.find((s) => s.id === params.id);
+export default async function ServiceDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const service = services.find((s) => s.id === id);
 
   if (!service) {
     notFound();
@@ -28,45 +29,55 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
           Back to Services
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <span className="text-green-400 font-mono text-lg">({service.id})</span>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                {service.title}
-              </h1>
+        {/* Header Section: Title & Description */}
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
+            <div className="space-y-6 lg:w-2/3">
+                <span className="text-sm font-bold tracking-[0.2em] text-zinc-500 uppercase">Services</span>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9]">
+                    {service.title}
+                </h1>
             </div>
-            
-            <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed">
-              {service.description}
-            </p>
+            <div className="lg:w-1/3 pt-2 lg:pt-12">
+                 <p className="text-xl text-zinc-400 leading-relaxed">
+                    {service.description}
+                 </p>
+            </div>
+        </div>
 
-            <div className="pt-8">
+        {/* Hero Image */}
+        <div className={`relative w-full aspect-video md:aspect-[21/9] rounded-3xl overflow-hidden mb-32 ${service.bgColor || 'bg-zinc-900'}`}>
+             <Image 
+                src={service.src} 
+                alt={service.title} 
+                fill 
+                className="object-cover"
+                priority
+                unoptimized
+             />
+        </div>
+
+        {/* Sub-services Content */}
+        {service.subServices && (
+            <div className="max-w-4xl mx-auto space-y-24">
+                {service.subServices.map((sub, index) => (
+                    <div key={index} className="space-y-6 border-t border-white/10 pt-12">
+                        <h3 className="text-4xl md:text-5xl font-bold tracking-tight">{sub.title}</h3>
+                        <p className="text-xl text-zinc-400 leading-relaxed max-w-2xl">{sub.description}</p>
+                    </div>
+                ))}
+            </div>
+        )}
+        
+        {/* CTA */}
+         <div className="mt-32 flex justify-center">
               <Link 
                 href="/contact"
-                className="inline-flex h-11 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-black transition-colors hover:bg-zinc-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                className="px-10 py-4 rounded-full bg-white text-black text-lg font-bold tracking-widest uppercase hover:bg-zinc-200 transition-colors"
               >
-                Start Project
+                Start a Project
               </Link>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className={`relative aspect-[4/3] w-full rounded-2xl overflow-hidden ${service.bgColor}`}>
-             <div className="absolute inset-0 flex items-center justify-center p-12">
-                <div className="relative w-full h-full shadow-2xl">
-                   <Image 
-                    src={service.src} 
-                    alt={service.title} 
-                    fill 
-                    className="object-cover rounded-lg"
-                    priority
-                   />
-                </div>
-             </div>
-          </div>
         </div>
+
       </div>
     </main>
   );

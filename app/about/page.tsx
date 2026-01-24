@@ -31,7 +31,7 @@ export default function AboutPage() {
             className="md:max-w-md mb-2 text-center md:text-right mx-auto md:mx-0 md:mr-auto md:pl-20 self-center"
           >
             <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-              The forefront of innovation — Seamlessly blending creativity with technology to deliver stunning visual experiences.
+              Committed to delivering reliable, high-quality, and modern solutions tailored to our clients’ needs.
             </p>
           </motion.div>
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
             className="text-7xl md:text-9xl font-bold tracking-tighter text-transparent stroke-text leading-none"
             style={{ WebkitTextStroke: "2px white" }}
           >
-            US
+            INDIA
           </motion.h1>
         </div>
 
@@ -72,78 +72,109 @@ export default function AboutPage() {
 
         {/* Section 3: Brand Narrative & Stats */}
         <div className="mb-32">
-          <motion.h2 
+          <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white max-w-6xl tracking-tight mb-16"
+            className="flex flex-col lg:flex-row gap-16 items-start mb-20"
           >
-            We Don&apos;t Just Design For The Present <span className="text-zinc-500">—</span> We Craft Experiences For The Future.
-          </motion.h2>
+             <div className="lg:w-1/3">
+                 <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">About MKSUKO</h2>
+                 <div className="h-1 w-20 bg-lime-400 rounded-full"/>
+            </div>
+            <div className="lg:w-2/3 space-y-8 text-xl md:text-2xl text-zinc-300 leading-relaxed">
+                <p>
+                    MKSUKO is a professional work and services provider company committed to delivering reliable, high-quality, and modern solutions tailored to our clients’ needs. We believe that great service is not just about completing work—it’s about building long-term trust, transparency, and value.
+                </p>
+                <p>
+                    At MKSUKO, we focus on providing efficient, result-driven services with a strong emphasis on quality, innovation, and customer satisfaction. Every project we take on is handled with attention to detail, professionalism, and a clear understanding of our client’s goals.
+                </p>
+            </div>
+          </motion.div>
 
-          {/* Stats / Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 perspective-container">
-            {/* Card 1: 360 Stats */}
-            <TiltCard className="bg-[#0a0a0a] rounded-3xl p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-[320px] border border-white/5 hover:border-white/10 transition-colors group">
-              <div className="flex flex-col h-full justify-between">
-                <div>
-                  <h3 className="text-6xl md:text-7xl font-bold text-white tracking-tighter">360°</h3>
-                </div>
-                <div className="space-y-4">
-                  <p className="text-xs font-bold tracking-widest text-white/60 uppercase">Hardwork + Dedication</p>
-                  <div className="w-full h-3 bg-zinc-800 rounded-full overflow-hidden">
-                    <div className="h-full w-[85%] bg-lime-400 rounded-full" />
-                  </div>
-                </div>
-              </div>
-            </TiltCard>
-
-            {/* Card 2: Strategy/Work */}
-            <TiltCard className="bg-[#0a0a0a] rounded-3xl p-8 flex items-center justify-between relative overflow-hidden md:h-[320px] border border-white/5 hover:border-white/10 transition-colors group">
-               <div className="flex items-center h-full gap-6">
-                  {/* WORK Stacked */}
-                  <div className="flex flex-col leading-none">
-                    <span className="text-5xl font-medium text-white tracking-tighter">WO</span>
-                    <span className="text-5xl font-medium text-white tracking-tighter">RK</span>
-                  </div>
-                  
-                  {/* HARD Vertical */}
-                  <div className="h-24 w-[1px] bg-white/20 mx-2" />
-                  <span className="text-xs font-bold tracking-[0.3em] text-white/60 uppercase -rotate-90 whitespace-nowrap origin-center">HARD</span>
-                  
-                  {/* 24/7 Rotated */}
-                  <span className="text-4xl md:text-5xl font-bold text-white tracking-tighter -rotate-90 ml-2 whitespace-nowrap">24/7</span>
-               </div>
-
-               {/* Circle Icon */}
-               <div className="absolute right-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full border border-white/20 flex items-center justify-center">
-                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-white" />
-                 </div>
-               </div>
-            </TiltCard>
-
-            {/* Card 3: Future */}
-            <TiltCard className="bg-[#0a0a0a] rounded-3xl p-8 flex flex-col justify-between md:h-[320px] border border-white/5 hover:border-white/10 transition-colors group">
-              <div className="flex flex-col h-full justify-between">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-5xl font-bold text-transparent stroke-text tracking-tighter uppercase" style={{ WebkitTextStroke: "1px white" }}>FUTURE</h3>
-                  <div className="text-white">
-                     <div className="flex">
-                        <ChevronRight className="w-8 h-8 -mr-4 opacity-50" />
-                        <ChevronRight className="w-8 h-8" />
-                     </div>
-                  </div>
-                </div>
-                
-                <div>
-                  <p className="text-xs font-bold tracking-widest text-white/80 uppercase leading-relaxed max-w-[200px]">
-                    Transforming With Creative Design
+          {/* What We Do Grid */}
+          <div className="flex flex-col gap-12">
+            <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-4">
+               <div>
+                  <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">What We Do</h2>
+                  <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
+                    We offer a wide range of professional services designed to support businesses and individuals with dependable solutions. Our approach is simple:
                   </p>
-                </div>
-              </div>
-            </TiltCard>
+               </div>
+               <div className="text-right hidden lg:block">
+                  <span className="text-xs font-bold tracking-widest text-lime-400 uppercase">Our Process</span>
+               </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+               {[
+                 { title: "Understand", subtitle: "the requirement", icon: "01" },
+                 { title: "Plan", subtitle: "smartly", icon: "02" },
+                 { title: "Execute", subtitle: "with precision", icon: "03" },
+                 { title: "Deliver", subtitle: "on time", icon: "04" },
+               ].map((item, index) => (
+                 <TiltCard key={index} className="bg-zinc-900/50 rounded-2xl p-8 border border-white/10 hover:border-lime-400/50 transition-all duration-300 group min-h-[240px] flex flex-col justify-between">
+                    <span className="text-4xl font-bold text-white/10 group-hover:text-lime-400/20 transition-colors">{item.icon}</span>
+                    <div>
+                        <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
+                        <p className="text-zinc-400 uppercase tracking-widest text-xs font-bold">{item.subtitle}</p>
+                    </div>
+                 </TiltCard>
+               ))}
+            </div>
+
+            <div className="text-center mt-8">
+                <p className="text-2xl md:text-3xl font-bold tracking-tight text-white">
+                    No shortcuts. <span className="text-zinc-500">No compromises on quality.</span>
+                </p>
+            </div>
+          </div>
+
+          {/* Our Mission Section */}
+          <div className="flex flex-col lg:flex-row gap-16 items-start mt-24 border-t border-white/10 pt-16">
+             <div className="lg:w-1/3">
+                 <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">Our Mission</h2>
+                 <div className="h-1 w-20 bg-lime-400 rounded-full"/>
+            </div>
+            <div className="lg:w-2/3 text-xl md:text-2xl text-zinc-300 leading-relaxed">
+                <p>
+                    Our mission is to deliver trusted, high-quality work services that help our clients grow with confidence. We aim to become a reliable service partner by consistently providing value, performance, and satisfaction in every project we handle.
+                </p>
+            </div>
+          </div>
+
+          {/* Our Vision Section */}
+          <div className="flex flex-col lg:flex-row gap-16 items-start mt-24 border-t border-white/10 pt-16">
+             <div className="lg:w-1/3">
+                 <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">Our Vision</h2>
+                 <div className="h-1 w-20 bg-lime-400 rounded-full"/>
+            </div>
+            <div className="lg:w-2/3 text-xl md:text-2xl text-zinc-300 leading-relaxed">
+                <p>
+                    To build MKSUKO as a recognized and trusted service provider brand, known for professionalism, innovation, and long-term client relationships.
+                </p>
+            </div>
+          </div>
+
+          {/* Our Commitment Section */}
+          <div className="flex flex-col lg:flex-row gap-16 items-start mt-24 border-t border-white/10 pt-16">
+             <div className="lg:w-1/3">
+                 <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">Our Commitment</h2>
+                 <div className="h-1 w-20 bg-lime-400 rounded-full"/>
+            </div>
+            <div className="lg:w-2/3 text-xl md:text-2xl text-zinc-300 leading-relaxed">
+                <p>
+                    At MKSUKO, quality is not an option—it’s a standard. We are committed to delivering services that meet industry standards and exceed customer expectations, every single time.
+                </p>
+            </div>
+          </div>
+
+          {/* Final Tagline */}
+          <div className="mt-24 border-t border-white/10 pt-16 text-center">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
+                  MKSUKO <span className="text-zinc-500">–</span> Trusted Work & Service Provider
+              </h2>
           </div>
         </div>
 

@@ -124,7 +124,7 @@ export default function WorkDetailPage() {
             <div className="space-y-8">
                <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-zinc-900">
                   <div className="absolute inset-0 flex items-center justify-center text-zinc-700">
-                    Image Placeholder 1
+                    <img src="image/av9" alt="" />
                   </div>
                </div>
                <div className="grid grid-cols-2 gap-8">
