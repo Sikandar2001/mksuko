@@ -4,10 +4,10 @@ import { works } from '@/lib/data'
 import { teamMembers } from '@/lib/team'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mksuko.com'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.mksuko.com'
 
   const staticRoutes = [
-    '/home',
+    '/',
     '/about',
     '/services',
     '/works',
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: route === '/home' ? 1 : 0.8,
+    priority: route === '/' ? 1 : 0.8,
   }))
 
   const serviceRoutes = services.map((service) => ({
