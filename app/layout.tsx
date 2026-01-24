@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VISUA X | Digital Agency",
-  description: "Futuristic Digital Agency Template",
-
+  title: "MKSUKO Services | Trusted Work & Service Provider",
+  description: "MKSUKO is a professional service provider company offering reliable, high-quality work and services with a focus on customer satisfaction.",
+  keywords: ["mksuko", "mksuko services", "service provider company", "professional services", "work service provider"],
   verification: {
     google: "IZMRy2QrfE4ulc06w9gKXYJF9C5IotffAiGBh5ucvGw",
   },
