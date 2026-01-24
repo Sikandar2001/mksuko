@@ -24,7 +24,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
           href="/services" 
           className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-12"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4"/>
           Back to Services
         </Link>
 

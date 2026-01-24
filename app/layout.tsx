@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "VISUA X | Digital Agency",
   description: "Futuristic Digital Agency Template",
+
+  verification: {
+    google: "IZMRy2QrfE4ulc06w9gKXYJF9C5IotffAiGBh5ucvGw",
+  },
 };
 
 export default function RootLayout({
