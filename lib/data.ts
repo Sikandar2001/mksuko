@@ -1,27 +1,38 @@
 export const works = [
   {
     id: 1,
-    title: "MODERN",
+    title: "VISHWAKARMA ALUMINIUM",
     category: "MARKETING",
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
+    src: "/image/av12.png",
     color: "text-blue-500",
-    description: "Modern marketing strategies that define the digital era."
+    website: "https://anilvishvakarma.com",
+    description: "Modern marketing strategies that define the digital era.",
+    gallery: [
+      "/image/av2.png",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop"
+    ]
   },
   {
     id: 2,
-    title: "FOCUS",
-    category: "CONCEPT",
-    src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop",
+    title: "MKSUKO ATTA",
+    category: "FOOD PRODUCTS",
+    src: "/image/mksuko.png",
     color: "text-amber-500",
-    description: "Sharp focus on conceptual design and visual storytelling."
+    website: "https://mksuko.com",
+    description: "Premium quality whole wheat flour for healthy living.",
+    gallery: [
+      "/image/mksuko.png"
+    ]
   },
   {
     id: 3,
-    title: "VIVID",
-    category: "ART DIRECTION",
-    src: "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1000&auto=format&fit=crop",
+    title: "MKSUKO WATER",
+    category: "WATER PRODUCTS",
+    src: "/image/water.png",
     color: "text-red-500",
-    description: "A vivid exploration of color and emotion in modern art direction."
+    website: "https://mksuko.com",
+    description: "Pure and refreshing mineral water."
   },
   {
     id: 4,

@@ -68,8 +68,16 @@ export default function Services() {
                 )}>
                   <TiltCard className="w-full max-w-[440px]">
                     <div className={`relative w-full aspect-[4/3] ${service.bgColor} rounded-xl overflow-hidden shadow-2xl border border-white/10`}>
-                       <div className="absolute inset-0 flex items-center justify-center p-6">
-                          <div className="relative w-full h-full shadow-inner rounded-lg overflow-hidden">
+                       <div className={cn(
+                         "absolute inset-0 flex items-center justify-center",
+                         // @ts-ignore
+                         service.hasPadding === false ? "p-0" : "p-6"
+                       )}>
+                          <div className={cn(
+                            "relative w-full h-full shadow-inner overflow-hidden",
+                            // @ts-ignore
+                            service.hasPadding === false ? "rounded-none" : "rounded-lg"
+                          )}>
                              <Image 
                               src={service.src} 
                               alt={service.title} 

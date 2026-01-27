@@ -17,24 +17,27 @@ import { ArrowUpRight } from "lucide-react";
 const works = [
   {
     id: 1,
-    title: "ANIL VISHVAKARMA",
+    title: "VISHWAKARMA ALUMINIUM",
     category: "Aluminium enterprises & Furnitures",
     src: "/image/av12.png",
-    color: "text-red-500"
+    color: "text-red-500",
+    website: "https://anilvishvakarma.com"
   },
   {
     id: 2,
     title: "MKSUKO ATTA",
     category: "FOOD PRODUCTS",
-    src: "/image/av2.png", 
-    color: "text-orange-500"
+    src: "/image/mksuko.png", 
+    color: "text-orange-500",
+    website: "https://mksuko.com"
   },
   {
     id: 3,
-    title: "REALITY",
-    category: "CONCEPT",
-    src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-    color: "text-white"
+    title: "MKSUKO WATER",
+    category: "WATER PRODUCTS",
+    src: "/image/water.png",
+    color: "text-blue-400",
+    website: "https://mksuko.com"
   },
   {
     id: 4,
@@ -215,6 +218,31 @@ export default function Works() {
                  {activeWork.category}
                </span>
              </motion.div>
+           </AnimatePresence>
+
+           <AnimatePresence mode="wait">
+             {/* @ts-ignore */}
+             {activeWork.website && (
+               <motion.div
+                 key={`website-${activeWork.id}`}
+                 initial={{ opacity: 0, y: 10 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 exit={{ opacity: 0, y: -10 }}
+                 transition={{ duration: 0.3 }}
+                 className="mb-1"
+               >
+                 <a 
+                   // @ts-ignore
+                   href={activeWork.website}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="flex items-center gap-2 px-5 py-2 bg-white text-black rounded-full text-xs font-bold tracking-wider uppercase hover:bg-gray-200 transition-colors"
+                 >
+                   <span>Visit Official Website</span>
+                   <ArrowUpRight className="w-3 h-3" />
+                 </a>
+               </motion.div>
+             )}
            </AnimatePresence>
            
            <Link href="/works">

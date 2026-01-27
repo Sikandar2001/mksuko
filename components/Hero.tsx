@@ -4,11 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Youtube, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
+import Image1 from "next/image";
+import Image2 from "next/image";
 
 const HERO_IMAGES = [
   "/image/av11.png",
-  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2864&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=2864&auto=format&fit=crop"
+  "/image/mksuko.png",
+  "/image/water.png"
 ];
 
 export default function Hero() {

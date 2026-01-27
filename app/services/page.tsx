@@ -75,6 +75,7 @@ export default function ServicesPage() {
                               alt={service.title} 
                               fill 
                               className="object-cover transition-transform duration-700 hover:scale-110"
+                              unoptimized
                             />
                           </div>
                        </div>

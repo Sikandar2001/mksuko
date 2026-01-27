@@ -16,45 +16,45 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   {
-    id: "ana-smith",
-    name: "Ana Smith",
-    role: "CEO",
-    description: "Ana leads the agency with strategic insight.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop",
+    id: "rajkumar-rajbhar",
+    name: "RAJKUMAR RAJBHAR",
+    role: "DIRECTOR",
+    description: "Rajkumar leads the agency with strategic insight.",
+    image: "/image/directer.png",
     socials: {
       youtube: "#",
       instagram: "#",
       facebook: "#"
     },
-    bio: "With over 15 years of experience in digital strategy and leadership, Ana has guided MKSUKO from a boutique studio to a global creative powerhouse. Her vision combines artistic excellence with business acumen.",
+    bio: "With over 15 years of experience in digital strategy and leadership, Rajkumar has guided MKSUKO from a boutique studio to a global creative powerhouse. His vision combines artistic excellence with business acumen.",
     skills: ["Strategy", "Leadership", "Business Development", "Brand Vision"]
   },
   {
-    id: "john-doe",
-    name: "John Doe",
-    role: "DESIGNER",
-    description: "John brings brands to life with his artistic vision.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop",
+    id: "priya-sharma",
+    name: "Priya Sharma",
+    role: "MANAGER",
+    description: "Driving operational excellence and team synergy.",
+    image: "/image/avs.png",
     socials: {
       youtube: "#",
       instagram: "#",
       facebook: "#"
     },
-    bio: "John is an award-winning designer with a passion for minimalism and typography. He believes that good design is invisible and great design is unforgettable.",
-    skills: ["UI/UX", "Typography", "Motion Design", "Art Direction"]
+    bio: "Priya brings over 10 years of experience in operations management. Her ability to streamline processes and foster a collaborative environment has been key to our team's success.",
+    skills: ["Operations", "Team Management", "Process Optimization", "Client Relations"]
   },
   {
-    id: "jane-white",
-    name: "Jane White",
-    role: "ANALYST",
-    description: "Innovative thinking, turning ideas into real results.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop",
+    id: "amit-kumar",
+    name: "Amit Kumar",
+    role: "FIELD OFFICER",
+    description: "Dedicated to on-ground execution and community engagement.",
+    image: "/image/www.png",
     socials: {
       youtube: "#",
       instagram: "#",
       facebook: "#"
     },
-    bio: "Jane translates complex data into actionable insights. Her analytical approach ensures that every creative decision is backed by solid evidence and user behavior metrics.",
-    skills: ["Data Analysis", "User Research", "Market Strategy", "Growth Hacking"]
-  },
+    bio: "Amit is the boots on the ground, ensuring that our projects are executed with precision and care. His connection with the community is unmatched.",
+    skills: ["Field Operations", "Community Engagement", "Logistics", "Project Execution"]
+  }
 ];

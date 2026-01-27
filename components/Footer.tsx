@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 const footerImages = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop", // Model
-  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop", // Male model
-  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop", // Fashion
-  "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop", // Abstract
-  "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=800&auto=format&fit=crop", // Portrait
-  "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=800&auto=format&fit=crop", // Tech
+  "/image/av11.png", // Model
+  "/image/water.png", // Male model
+  "/image/mksuko.png", // Fashion
+  "/image/av7.png", // Abstract
+  "/image/av9.png", // Portrait
+  "/image/mksuko.png", // Tech
 ];
 
 export default function Footer() {

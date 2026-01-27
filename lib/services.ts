@@ -31,7 +31,7 @@ export const services = [
     id: "02",
     title: "MKSUKO ATTA",
     description: "Premium quality fresh Chakki Atta. Made from the finest grains to ensure soft and healthy rotis for your family. Experience the taste of purity.",
-    src: "/image/av4.png",
+    src: "/image/mksuko.png",
     bgColor: "bg-white",
     className: "text-xl md:text-2xl",
     subServices: [
@@ -49,8 +49,9 @@ export const services = [
     id: "03",
     title: "MKSUKO WATER",
     description: "Pure and refreshing mineral water. Processed with advanced filtration technology to ensure safety and hydration in every drop.",
-    src: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=800&auto=format&fit=crop",
-    bgColor: "bg-lime-400",
+    src: "/image/water.png",
+    bgColor: "bg-black",
+    hasPadding: false,
     className: "text-xl md:text-2xl",
      subServices: [
         {

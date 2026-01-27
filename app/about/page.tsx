@@ -265,7 +265,7 @@ export default function AboutPage() {
                 className="relative w-full aspect-[3/4] lg:aspect-[4/5] rounded-2xl overflow-hidden"
               >
                  <Image
-                    src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop"
+                    src="/image/image.png"
                     alt="Creative Skills"
                     fill
                     className="object-cover"
@@ -276,9 +276,9 @@ export default function AboutPage() {
               {/* Right Skills */}
               <div className="space-y-12">
                  {[
-                   { name: "WEB DESIGN", value: 70 },
-                   { name: "DEVELOPMENT", value: 80 },
-                   { name: "UX/UI CONCEPT", value: 90 },
+                   { name: "Msuko ATTA", value: 70 },
+                   { name: "Msuko WATER", value: 80 },
+                   { name: "Aluminium and Furniture", value: 90 },
                    { name: "BRANDING", value: 65 },
                  ].map((skill, index) => (
                    <motion.div 

@@ -1,7 +1,7 @@
 "use client";
 
 import { works } from "@/lib/data";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Globe, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -46,6 +46,7 @@ export default function WorkDetailPage() {
             fill
             className="object-cover opacity-60"
             priority
+            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
         </div>
@@ -66,6 +67,30 @@ export default function WorkDetailPage() {
             <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-8">
               {work.title}
             </h1>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              {/* @ts-ignore */}
+              {work.website && (
+                <a 
+                  // @ts-ignore
+                  href={work.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full text-sm font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors w-fit"
+                >
+                  <Globe className="w-5 h-5" />
+                  <span>Official Website</span>
+                </a>
+              )}
+              
+              <Link 
+                href="/contact"
+                className="flex items-center gap-3 px-8 py-4 border border-white/30 text-white rounded-full text-sm font-bold tracking-widest uppercase hover:bg-white/10 transition-colors w-fit"
+              >
+                <Mail className="w-5 h-5" />
+                <span>Contact Me</span>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </header>
@@ -124,7 +149,7 @@ export default function WorkDetailPage() {
             <div className="space-y-8">
                <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-zinc-900">
                   <div className="absolute inset-0 flex items-center justify-center text-zinc-700">
-                    <img src="image/av9" alt="" />
+                    Image Placeholder 1
                   </div>
                </div>
                <div className="grid grid-cols-2 gap-8">
