@@ -5,22 +5,46 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Loader2 } from "lucide-react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/lib/firebase";
 
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError(null);
     
-    // Simulate login delay
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Redirect to dashboard
-    router.push("/dashboard");
+    try {
+      // Check if we are using placeholder keys
+      if (process.env.NEXT_PUBLIC_FIREBASE_API_KEY === 'your_api_key_here') {
+        // Simulate successful login for development/demo mode
+        localStorage.setItem('isDemoAuthenticated', 'true');
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Fake delay
+        router.push("/blog/create");
+        return;
+      }
+
+      await signInWithEmailAndPassword(auth, email, password);
+      // Redirect to blog creation page if coming from there, otherwise dashboard
+      // For now, redirect to blog create as per request
+      router.push("/blog/create");
+    } catch (err: any) {
+      console.error("Login failed", err);
+      if (err.code === 'auth/invalid-credential' || err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password') {
+        setError("Invalid email or password. Please try again.");
+      } else {
+        // Show the actual error message for debugging
+        setError(`Error: ${err.message} (${err.code})`);
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -43,8 +67,14 @@ export default function LoginPage() {
         >
           <div className="text-center mb-10">
             <h1 className="text-3xl font-bold tracking-tight mb-2">Welcome Back</h1>
-            <p className="text-zinc-400">Log in to your account to continue</p>
+            <p className="text-zinc-400">Log in to post your blog</p>
           </div>
+
+          {error && (
+            <div className="bg-red-500/10 border border-red-500/50 text-red-500 px-4 py-3 rounded-xl text-sm mb-6">
+              {error}
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
